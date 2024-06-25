@@ -11,10 +11,11 @@
 <body>
     <div id="debug"></div>
 <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
-    <a-camera id="ARcamera" gps-new-camera='gpsMinDistance: 5'> <a-cursor></a-cursor></a-camera>
-     <a-entity gltf-model="lib/obj/pin.glb" scale="10 10 10" gps-new-entity-place="latitude:35.52279267479966; longitude:139.65843120161273" ></a-entity>
+    <a-entity gltf-model="lib/obj/pin.glb" scale="10 10 10" gps-entity-place="latitude:35.52279267479966; longitude:139.65843120161273" ></a-entity>
+     <a-entity gltf-model="lib/obj/pin.glb" scale="10 10 10" gps-entity-place="latitude:35.53182711560345; longitude:139.65855068889573" ></a-entity>
+    <a-camera id="ARcamera" gps-new-camera='gpsMinDistance: 5'>  <a-cursor></a-cursor> </a-camera>
+    <!-- <a-entity camera gps-new-camera='gpsMinDistance: 5'><a-cursor></a-cursor></a-entity> -->
 </a-scene>
-
 <script type="text/javascript" src="lib/js/index.js"></script>
 </body>
 </html>
