@@ -7,3 +7,64 @@
     left: 0;
     display: block;
   }
+  #nav{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 200px;
+    background-color: #fff;
+    bottom: -200px;
+    left: 0;
+    opacity: 0;
+    border-radius: 20px 20px 0px 0px;  
+  }
+ 
+  .slideDown {
+    animation-name:slideTextY-100;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+.slideUp {
+  animation-name:slideTextY100;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity: 1;
+}
+
+@keyframes slideTextY100 {
+    from {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(-100%);
+        opacity: 1;
+    }
+}
+
+
+@keyframes slideTextY-100 {
+    from {
+        transform: translateY(-100%);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 0;
+    }
+}
+#distance{
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    font-size: 1.5em;
+}
+#locationName{
+    font-size: 5em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
