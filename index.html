@@ -14,7 +14,7 @@
     <div id="debug"></div>
 <a-scene vr-mode-ui='enabled: false'  arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true logarithmicDepthBuffer: true;'>
 
-    <a-camera id="ARcamera" gps-camera='gpsMinDistance: 5' arjs-look-controls='smoothingFactor: 0.1' rotation-reader>  <a-cursor></a-cursor> </a-camera>
+    <a-camera id="ARcamera" gps-camera='gpsMinDistance: 5' rotation-reader>  <a-cursor></a-cursor> </a-camera>
     <!-- <a-entity camera gps-new-camera='gpsMinDistance: 5'><a-cursor></a-cursor></a-entity> -->
 </a-scene>
 <div id="nav" class="">
@@ -22,8 +22,8 @@
         <div id ="distance">Trrrrrrrrrrrrrrrrrextm</div>
 </div>
 <!-- arjs-look-controls='smoothingFactor: 0.1' -->
-<script type="text/javascript" src="./lib/js/index.js"></script>
-<!-- <script src="./lib/js/CalcVR.js" type="module"></script> -->
+<!-- <script type="text/javascript" src="./lib/js/index.js"></script> -->
+<script src="./lib/js/CalcVR.js" type="module"></script>
 </body>
 </html>
 
