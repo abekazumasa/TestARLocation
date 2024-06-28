@@ -7,6 +7,15 @@
     left: 0;
     display: block;
   }
+  #debugdistance {
+    position: fixed;
+    z-index: 10000;
+    background-color: #fff;
+    padding: 10px;
+    top: 40px;
+    left: 0;
+    display: block;
+  }
   #nav{
     display: flex;
     position: fixed;

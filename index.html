@@ -12,9 +12,10 @@
 </head>
 <body>
     <div id="debug"></div>
-<a-scene vr-mode-ui='enabled: false'  arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true logarithmicDepthBuffer: true;'>
+    <div id="debugdistance"></div>
+<a-scene vr-mode-ui='enabled: false'  arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; logarithmicDepthBuffer: true; alpha: true; '>
 
-    <a-camera id="ARcamera" gps-camera='gpsMinDistance: 5' rotation-reader>  <a-cursor></a-cursor> </a-camera>
+    <a-camera id="ARcamera" gps-camera='gpsMinDistance: 5'  rotation-reader>  <a-cursor></a-cursor> </a-camera>
     <!-- <a-entity camera gps-new-camera='gpsMinDistance: 5'><a-cursor></a-cursor></a-entity> -->
 </a-scene>
 <div id="nav" class="">
