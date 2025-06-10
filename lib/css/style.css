@@ -1,21 +1,137 @@
-#debug {
+#main-scene{
+  position: fixed;
+}
+#debug-nav {
     position: fixed;
     z-index: 10000;
-    background-color: #fff;
-    padding: 10px;
-    top: 0;
+    top: 0px;
     left: 0;
-    display: block;
+    display: flex;
+    flex-flow: column;
   }
-#debugdistance {
+.debug-text {
+    background-color: #fff;
+    font-size: 0.5em;
+    margin: 0.5em auto;
+    padding:1em;
+}
+  /*nav  */
+#nav-menu{
     position: fixed;
     z-index: 10000;
-    background-color: #fff;
-    padding: 10px;
     top: 0px;
     right: 0;
+    margin: 0;
+    padding: 0; 
+}
+.menu{
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+.menu-btn:checked ~ .menu {
+    transform: scale(1, 1);
     display: block;
+    background-color: #fff;
+    transform-origin: top;
+    transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
   }
+  .menu li {
+    position: relative;
+    padding: 15px 0;
+    margin: 0 54px;
+    opacity: 0;
+    transition: 0.5s;
+    list-style: none;
+  }
+  
+  .menu-btn:checked ~ .menu p,
+  .menu-btn:checked ~ .menu li {
+    opacity: 1;
+    transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.2s;
+  }
+  
+  .menu-btn {
+    display: none;
+  }
+  
+  .menu-icon {
+    display: inline-block;
+    position: fixed;
+    z-index: 10000;
+    top: 0px;
+    right: 0;
+    cursor: pointer;
+    padding: 24px 14px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  
+  .navicon {
+    background: #0b0a0a;
+    display: block;
+    height: 3px;
+    width: 26px;
+    position: relative;
+    transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+  }
+  
+  .navicon:before,
+  .navicon:after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: #0b0a0a;
+    transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+  }
+  
+  .navicon:before {
+    top: 9px;
+  }
+  
+  .navicon:after {
+    bottom: 9px;
+  }
+  
+  /* Hamburger Menu Animation Start */
+  .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before {
+    top: 0;
+  }
+  .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    bottom: 0;
+  }
+  
+  .menu-btn:checked ~ .menu-icon .navicon {
+    background: rgba(0, 0, 0, 0);
+    transition: 0.2192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+  }
+  /* Hamburger Menu Animation End */
+  
+  /* Navbar Container */
+  .navtext-container {
+    width: 100%;
+    height: 52px;
+    position: absolute;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+#LocationSubmit{
+  width: 80%;
+}
+
   #nav{
     display: flex;
     position: fixed;
