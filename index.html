@@ -34,7 +34,10 @@
         </a-entity>
     </a-entity>
 
-     <a-entity  position="0 0 10" gltf-model ="./lib/obj/north.glb" ></a-entity>
+     <a-entity  position="0 0 -10" scale ="2 2 2" gltf-model ="./lib/obj/north.glb" look-at="[gps-camera]"></a-entity>
+     <a-entity  position="10 0 0" scale ="2 2 2" gltf-model ="./lib/obj/east.glb" look-at="[gps-camera]"></a-entity>
+     <a-entity  position="0 0 10" scale ="2 2 2" gltf-model ="./lib/obj/south.glb" look-at="[gps-camera]"></a-entity>
+     <a-entity  position="-10 0 0" scale ="2 2 2" gltf-model ="./lib/obj/west.glb" look-at="[gps-camera]"></a-entity>
 </a-scene>
 <div id="nav" class="">
     <div id="locationName">The time is always right to do what is right.</div>
